@@ -8,18 +8,26 @@
     </div>
     <div class="line p-2 d-flex ml-2"></div>
     <div class="card_body">
-      <slot></slot>
+      <div class="nav d-flex jc-between p-3">
+      </div></div>
+      <swiper>
+        <swiper-slide  v-for="m in 5" :key="m">
+          <div class="p-3" v-for="n in 5" :key="n">
+            <span>[公告]</span>
+            <span>|</span>
+            <span class=" flex-1">2月18日全服不停机更新公告</span>
+            <span class="">02/17</span>
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
+   </div>
   </div>
-</div>
 </template>
 
 <script>
 export default {
-  props: {
-    title: { type: String, require: true },
-    icon: { type: String, require: true }
-  }
+
 }
 
 </script>

@@ -5,13 +5,11 @@ import App from './App'
 import router from './router'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import Card from './components/Card.vue'
-import CardList from './components/CardList.vue'
 import './assets/sass/style.scss'
 import 'swiper/dist/css/swiper.css'
 import './assets/iconfont/iconfont.css'
 Vue.config.productionTip = false
 Vue.component('m-card', Card)
-Vue.component('list-card', CardList)
 Vue.use(VueAwesomeSwiper)
 /* eslint-disable no-new */
 new Vue({

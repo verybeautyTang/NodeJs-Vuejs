@@ -81,14 +81,14 @@
     </div>
   </div>
   <list-card icon="menu" title="新闻资讯" :categories="newsList">
-    <template #item="{category}">
-      <div class="p-3" v-for="(item, n) in category.news" :key="n">
-        <span>{{item.name}}</span>
+    <!-- <template #item="{category}">
+      <div class="p-3" v-for="(new, n) in category" :key="n">
+        <span>[公告]</span>
         <span>|</span>
-        <span class=" flex-1">{{item.title}}</span>
-        <span class="">{{item.date}}</span>
+        <span class=" flex-1">2月18日全服不停机更新公告</span>
+        <span class="">02/17</span>
       </div>
-    </template>
+    </template> -->
   </list-card>
   <m-card icon="icon-test" title="英雄列表"></m-card>
   <m-card icon="video" title="精彩视频"></m-card>

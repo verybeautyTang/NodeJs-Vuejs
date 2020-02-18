@@ -80,16 +80,7 @@
       <span class='fs-xs'>收起</span>
     </div>
   </div>
-  <list-card icon="menu" title="新闻资讯" :categories="newsList">
-    <template #item="{category}">
-      <div class="p-3" v-for="(item, n) in category.news" :key="n">
-        <span>{{item.name}}</span>
-        <span>|</span>
-        <span class=" flex-1">{{item.title}}</span>
-        <span class="">{{item.date}}</span>
-      </div>
-    </template>
-  </list-card>
+  <list-card icon="menu" title="新闻资讯" :categories="nesList"></list-card>
   <m-card icon="icon-test" title="英雄列表"></m-card>
   <m-card icon="video" title="精彩视频"></m-card>
   <m-card icon="Book" title="图文攻略"></m-card>
@@ -131,24 +122,6 @@ export default {
         },
         {
           name: '新闻2',
-          news: new Array(5).fill({}).map(v => ({
-            name: '公告',
-            title: '2月18日全服不停机更新公告',
-            date: '02/17'
-          }
-          ))
-        },
-        {
-          name: '新闻3',
-          news: new Array(5).fill({}).map(v => ({
-            name: '公告',
-            title: '2月18日全服不停机更新公告',
-            date: '02/17'
-          }
-          ))
-        },
-        {
-          name: '新闻4',
           news: new Array(5).fill({}).map(v => ({
             name: '公告',
             title: '2月18日全服不停机更新公告',

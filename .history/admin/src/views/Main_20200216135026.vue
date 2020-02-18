@@ -63,7 +63,7 @@
         <span>beautyTang</span>
       </el-header>
       <el-main>
-        <router-view :key="$route.path"></router-view>
+        <router-view></router-view>
       </el-main>
     </el-container>
   </el-container>

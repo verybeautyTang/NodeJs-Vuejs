@@ -7,19 +7,14 @@
       <i class='iconfont icon-menu1 pr-2'></i>
     </div>
     <div class="line p-2 d-flex ml-2"></div>
-    <div class="card_body">
-      <slot></slot>
-    </div>
+    <div class="card_body"></div>
   </div>
 </div>
 </template>
 
 <script>
 export default {
-  props: {
-    title: { type: String, require: true },
-    icon: { type: String, require: true }
-  }
+
 }
 
 </script>

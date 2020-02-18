@@ -80,19 +80,47 @@
       <span class='fs-xs'>收起</span>
     </div>
   </div>
-  <list-card icon="menu" title="新闻资讯" :categories="newsList">
-    <template #item="{category}">
-      <div class="p-3" v-for="(item, n) in category.news" :key="n">
-        <span>{{item.name}}</span>
-        <span>|</span>
-        <span class=" flex-1">{{item.title}}</span>
-        <span class="">{{item.date}}</span>
+  <m-card icon="menu" title="新闻资讯">
+     <div class="card_body">
+      <div class="nav d-flex jc-between p-3">
+        <div class="nav_item active">
+          <div class="nav_link">
+            热门
+          </div>
+        </div>
+        <div class="nav_item">
+          <div class="nav_link">
+            新闻
+          </div>
+        </div>
+        <div class="nav_item">
+          <div class="nav_link">
+            公告
+          </div>
+        </div>
+        <div class="nav_item">
+          <div class="nav_link">
+            活动
+          </div>
+        </div>
+        <div class="nav_item">
+          <div class="nav_link">
+            赛事
+          </div>
+        </div>
       </div>
-    </template>
-  </list-card>
-  <m-card icon="icon-test" title="英雄列表"></m-card>
-  <m-card icon="video" title="精彩视频"></m-card>
-  <m-card icon="Book" title="图文攻略"></m-card>
+      <swiper>
+        <swiper-slide  v-for="m in 5" :key="m">
+          <div class="p-3" v-for="n in 5" :key="n">
+            <span>[公告]</span>
+            <span>|</span>
+            <span class=" flex-1">2月18日全服不停机更新公告</span>
+            <span class="">02/17</span>
+          </div>
+        </swiper-slide>
+      </swiper>
+    </div>
+  </m-card>
   </div>
 </template>
 
@@ -109,54 +137,7 @@ export default {
           delay: 2000,
           loop: true
         }
-      },
-      newsList: [
-        {
-          name: '新闻',
-          news: new Array(5).fill({}).map(v => ({
-            name: '公告',
-            title: '2月18日全服不停机更新公告',
-            date: '02/17'
-          }
-          ))
-        },
-        {
-          name: '新闻1',
-          news: new Array(5).fill({}).map(v => ({
-            name: '公告',
-            title: '2月18日全服不停机更新公告',
-            date: '02/17'
-          }
-          ))
-        },
-        {
-          name: '新闻2',
-          news: new Array(5).fill({}).map(v => ({
-            name: '公告',
-            title: '2月18日全服不停机更新公告',
-            date: '02/17'
-          }
-          ))
-        },
-        {
-          name: '新闻3',
-          news: new Array(5).fill({}).map(v => ({
-            name: '公告',
-            title: '2月18日全服不停机更新公告',
-            date: '02/17'
-          }
-          ))
-        },
-        {
-          name: '新闻4',
-          news: new Array(5).fill({}).map(v => ({
-            name: '公告',
-            title: '2月18日全服不停机更新公告',
-            date: '02/17'
-          }
-          ))
-        }
-      ]
+      }
     }
   }
 }

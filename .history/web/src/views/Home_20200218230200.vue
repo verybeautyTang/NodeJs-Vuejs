@@ -83,10 +83,10 @@
   <list-card icon="menu" title="新闻资讯" :categories="newsList">
     <template #item="{category}">
       <div class="p-3" v-for="(item, n) in category.news" :key="n">
-        <span>{{item.name}}</span>
+        <span>item.namespace</span>
         <span>|</span>
-        <span class=" flex-1">{{item.title}}</span>
-        <span class="">{{item.date}}</span>
+        <span class=" flex-1">item.title</span>
+        <span class="">item.date</span>
       </div>
     </template>
   </list-card>

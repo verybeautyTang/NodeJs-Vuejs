@@ -81,13 +81,7 @@
     </div>
   </div>
   <list-card icon="menu" title="新闻资讯" :categories="newsList">
-    <template #item="{category}">
-      <div class="p-3" v-for="(item, n) in category.news" :key="n">
-        <span>{{item.name}}</span>
-        <span>|</span>
-        <span class=" flex-1">{{item.title}}</span>
-        <span class="">{{item.date}}</span>
-      </div>
+    <template #item="{categrory}">
     </template>
   </list-card>
   <m-card icon="icon-test" title="英雄列表"></m-card>

@@ -17,8 +17,7 @@
 <script>
 export default {
   props: {
-    title: { type: String, require: true },
-    icon: { type: String, require: true }
+
   }
 }
 
