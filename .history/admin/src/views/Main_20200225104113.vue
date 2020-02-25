@@ -55,10 +55,10 @@
         <el-dropdown>
           <i class="el-icon-setting" style="margin-right: 15px"></i>
           <el-dropdown-menu slot="dropdown">
-            <el-button @click="outlog">退出登录</el-button>
+            <reouter-link tag='el-dropdown-item' @click="outlog">退出登录</reouter-link>
           </el-dropdown-menu>
         </el-dropdown>
-        <span>admin1</span>
+        <span>beautyTang</span>
       </el-header>
       <el-main>
         <router-view :key="$route.path"></router-view>
@@ -82,11 +82,6 @@ export default {
   methods: {
     outlog () {
       sessionStorage.clear()
-      this.$message({
-        message: '退出成功',
-        type: 'success'
-      })
-      this.$router.push('/login')
     }
   }
 }

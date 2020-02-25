@@ -58,7 +58,7 @@
             <el-button @click="outlog">退出登录</el-button>
           </el-dropdown-menu>
         </el-dropdown>
-        <span>admin1</span>
+        <span>{{login.account}}</span>
       </el-header>
       <el-main>
         <router-view :key="$route.path"></router-view>
@@ -69,6 +69,9 @@
 
 <script>
 export default {
+  props: {
+    account: { Type: String }
+  },
   data () {
     const item = {
       date: '2016-05-02',

@@ -58,7 +58,7 @@
             <el-button @click="outlog">退出登录</el-button>
           </el-dropdown-menu>
         </el-dropdown>
-        <span>admin1</span>
+        <span>beautyTang</span>
       </el-header>
       <el-main>
         <router-view :key="$route.path"></router-view>
@@ -86,7 +86,7 @@ export default {
         message: '退出成功',
         type: 'success'
       })
-      this.$router.push('/login')
+      this.$router.push('/#/login')
     }
   }
 }

@@ -58,7 +58,7 @@
             <el-button @click="outlog">退出登录</el-button>
           </el-dropdown-menu>
         </el-dropdown>
-        <span>admin1</span>
+        <span>{{login.account}}</span>
       </el-header>
       <el-main>
         <router-view :key="$route.path"></router-view>
@@ -76,7 +76,8 @@ export default {
       address: '上海市普陀区金沙江路 1518 弄'
     }
     return {
-      tableData: Array(20).fill(item)
+      tableData: Array(20).fill(item),
+      login: {}
     }
   },
   methods: {
@@ -87,7 +88,14 @@ export default {
         type: 'success'
       })
       this.$router.push('/login')
+    },
+    async fetch () {
+      // const res = this.$http.post('/login')
+      // this.login = res.data
     }
+  },
+  created () {
+    this.fetch()
   }
 }
 </script>
