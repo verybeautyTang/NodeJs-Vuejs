@@ -7,7 +7,7 @@ app.use(express.json())
 
 app.use('/',express.static('web'))
 
-app.use('/admin',express.static('admin'))
+// app.use('/',express.static('admin'))
 
 app.use('/uploads',express.static(__dirname +'\\uploads'))
 
@@ -19,4 +19,5 @@ require('./routers/web/index.js')(app)
 
 app.listen(3000, () => {
     console.log('http://localhost:3000')
+    console.log(__dirname)
 });

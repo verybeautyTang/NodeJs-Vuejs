@@ -5,9 +5,9 @@ app.use(require('cors')())
 app.set('secret','hsyiswyxmt666')
 app.use(express.json())
 
-app.use('/',express.static('web'))
+// app.use('/',express.static(__dirname,+'/web'))
 
-app.use('/admin',express.static('admin'))
+app.use('/',express.static(__dirname,+'/admin'))
 
 app.use('/uploads',express.static(__dirname +'\\uploads'))
 
@@ -19,4 +19,5 @@ require('./routers/web/index.js')(app)
 
 app.listen(3000, () => {
     console.log('http://localhost:3000')
+    console.log(__dirname)
 });

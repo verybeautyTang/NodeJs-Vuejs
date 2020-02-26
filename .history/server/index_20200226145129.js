@@ -7,7 +7,7 @@ app.use(express.json())
 
 app.use('/',express.static('web'))
 
-app.use('/admin',express.static('admin'))
+app.use('/dist1',express.static('dist1'))
 
 app.use('/uploads',express.static(__dirname +'\\uploads'))
 
